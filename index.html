@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+<title>Document</title>
+<!-- 　　　 -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<!--<link rel="stylesheet" href="hoge.css">-->
+<!--<script src="hoge.js"></script>-->
 </head>
+
 <body>
-<h1>Gitのテスト</h1>
-  <p>GitHubで修正</p>
+<script>
+  var box = "Global!";
+
+  function getBox() {
+    var box = "local!";
+    return box;
+  }
+  console.log(getBox());
+
+  console.log(box);
+
+</script>
+
+<script>
+  var hensu = 500;
+
+  function getBox() {
+    var hensu2 = 50;
+    console.log(hensu2);
+    console.log("inside");
+    return hensu2;
+  }
+
+  console.log(getBox());
+  console.log(hensu);
+
+</script>
+
+<script>
+  function c(a){
+    return "Welcome" + a + "san";
+  }
+  
+  console.log(c("ミスター"));
+
+</script>
 </body>
+
 </html>
