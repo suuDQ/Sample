@@ -1,0 +1,9 @@
+https://9-bb.com/brackets-emmet/
+
+"!!": "!!!
++html[lang=${lang}]>(head>meta[charset=${charset}]
++meta[name=viewport content=width=device-width content=initial-scale=1]+title{${1:Document}}
++link[href=./css/main.css]
++link[href=//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css]
++script[src=//code.jquery.com/jquery-1.11.3.min.js]+script[src=./js/main.js])
++body",
