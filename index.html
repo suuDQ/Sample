@@ -14,6 +14,50 @@
 
 <body>
 <script>
+  var val = 'Global';
+
+  function getValue() {
+    var val = 'Local';
+    return val;
+  }
+  console.log(getValue());
+  console.log(val);
+
+</script>
+<script>
+  var val = 'Global';
+  var getValue = function() {
+    var val = 'Local';
+    return val;
+  }
+  console.log(getValue());
+  console.log(val);
+
+</script>
+<script>
+  function hello() {
+    console.log("Hello World");
+    console.log(hello.length);
+  }
+  hello();
+
+  var hello2 = function(a,b,c){
+    console.log(b);
+    console.log(hello2.length);
+  }
+  hello2('Hello World!',500, return a+b;);
+</script>
+
+
+
+
+
+
+
+
+
+
+<!--<script>
   var box = "Global!";
 
   function getBox() {
@@ -73,26 +117,122 @@
 
 </script>
 <script>
-  var square = {width:100,height:200};
-  for (var A in square){
+  var square = {
+    width: 100,
+    height: 200
+  };
+  for (var A in square) {
     console.log(A + '=' + square[A]);
   }
 
   var company = new Object();
   company['会社名'] = 'Kaisyamei';
   company['担当者'] = 'Mr.Saturn';
-  
-  for (var NN in company){
+
+  for (var NN in company) {
     console.log(NN + 'は' + company[NN]);
   }
+
+</script>
+<script>
+  for (i = 0; i < 100; i++) {
+    if (i > 2) {
+      break;
+    }
+    console.log(i);
+  }
+
 </script>
 
 <script>
-for(i=0;i<100;i++){
-  if(i>20){break;}
-  console.log(i);
-}
+  var human = {};
+  human.name = 'suzuki';
+  human.age = 43;
+  human.gender = 'Male'
+
+  human.info = function() {
+    return human.name + ' ' + human.age + ' ' + human.gender
+  }
+  console.log(human.info());
+
 </script>
+<script>
+  var hensu = {
+    atai: 500
+  };
+  var human = {
+    name: 'suzuki',
+    age: 43,
+    gender: 'Male',
+    info: function() {
+      return human.name + human.age + human.gender + hensu.atai
+    }
+  }
+  console.log(human.info());
+
+</script>
+<script>
+  var a = {};
+  a.A = 1;
+  a.B = 2;
+  a.info = function() {
+    return a.A + ' ' + a.B
+  };
+  console.log(a.info());
+  var b = {
+    A: 1,
+    B: 2,
+    info: function() {
+      return a.A + ' ' + b.A
+    }
+  };
+  console.log(b.info());
+
+</script>
+
+<script>
+  var myFunc = function() {
+    this.prop1 = 'bar';
+    this.prop2 = 'foo';
+    this.method = function() {
+      return this.prop1 + this.prop2;
+    }
+  }
+
+  var obj1 = new myFunc();
+  var obj2 = myFunc();
+
+  console.log(obj1.method());
+  console.log(obj1);
+
+</script>
+
+<script>
+    for(var item in window) {
+      if(typeof window[item]!=='function'){
+        console.log( item );
+      }
+     
+     
+    }  
+</script>
+<script>
+  var myFunc = function() {
+    this.prop1 = 'bar';
+  }
+  var obj1 = new myFunc();
+  var obj2 = myFunc();
+
+  console.log(obj1);
+  console.log(obj2);
+
+function oha(A){
+  console.log('Hello'+A);
+}
+  oha(A) = 'ワールド';
+</script>-->
+
+
 
 
 
