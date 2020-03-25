@@ -14,40 +14,34 @@
 
 <body>
 <script>
-  var val = 'Global';
-
-  function getValue() {
-    var val = 'Local';
-    return val;
+  //this.AAA='Hello';console.log(window.AAA);
+  
+  function sample(){console.log(this);}sample();
+  
+  var myObj = {
+    
+    name:'Saturn',
+    
+    myFunc:function(){
+      console.log(this);
+    }
   }
-  console.log(getValue());
-  console.log(val);
-
+  //console.log(myObj.name);
+  myObj.myFunc();
 </script>
+
 <script>
-  var val = 'Global';
-  var getValue = function() {
-    var val = 'Local';
-    return val;
+  function Human(a,b){
+    this.name = a;
+    this.age = b;
   }
-  console.log(getValue());
-  console.log(val);
-
-</script>
-<script>
-  function hello() {
-    console.log("Hello World");
-    console.log(hello.length);
-  }
-  hello();
-
-  var hello2 = function(a,b,c){
-    console.log(b);
-    console.log(hello2.length);
-  }
-  hello2('Hello World!',500, return a+b;);
-</script>
-
+  
+  var Mr = new Human('Saturn',30);
+  
+  console.log(Mr);
+  console.log(Mr.name,Mr.age);
+  
+  </script>
 
 
 
