@@ -61,7 +61,7 @@ function hoge2(a,b){
   hoge2('Mercury','Venus');
 
 var planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto']
-var planets2 = {first:'MERCURY',second:'VENUS',third:'EARTH',fourth:'MARS',fifth:'JUPITER',sixth:'SATURN',seventh:'URANUS',eighth:'NEPTUNE',ninth:'PLUTO'}
+var planets2 = {first:'MERCURY',second:'VENUS',third:'EARTH',fourth:'MARS',fifth:'JUPITER',sixth:'SATURN',seventh:'URANUS',eighth:'NEPTUNE',ninth:'PLUTO',info:function(){return planets2.info(planets2.first)}}
 
 for(var n in planets2){
   //console.log(planets2[n]);
@@ -73,8 +73,10 @@ for(var n in planets2){
   console.log(Object.keys(planets2).length);
   console.log(planets2);
 
-function Discovery(){}
-
+function Discovery(){
+  document.write(planets2.info());
+}
+Discovery();
 
   
   
