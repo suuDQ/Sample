@@ -13,23 +13,26 @@
 </head>
 
 <body>
-<script>
-  //this.AAA='Hello';console.log(window.AAA);
+<!--<script>
+  this.AAA='HelloAAA';
+  console.log(window.AAA);
   
-  function sample(){console.log(this);}sample();
+  function sample(){
+    console.log(this);
+  }
+  sample();
   
   var myObj = {
     
-    name:'Saturn',
+    name:'Saturn!',
     
     myFunc:function(){
       console.log(this);
     }
   }
-  //console.log(myObj.name);
+  console.log(myObj.name);
   myObj.myFunc();
 </script>
-
 <script>
   function Human(a,b){
     this.name = a;
@@ -41,7 +44,61 @@
   console.log(Mr);
   console.log(Mr.name,Mr.age);
   
-  </script>
+  </script>-->
+<script>
+var hoge = function(a,b){
+  var box = a;
+  var box2 = b;
+  console.log(box,box2);
+}
+hoge('Jupiter','Saturn');
+
+function hoge2(a,b){
+  var AAA;
+  var BBB;
+  console.log(a,b)
+}
+  hoge2('Mercury','Venus');
+
+var planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto']
+var planets2 = {first:'MERCURY',second:'VENUS',third:'EARTH',fourth:'MARS',fifth:'JUPITER',sixth:'SATURN',seventh:'URANUS',eighth:'NEPTUNE',ninth:'PLUTO'}
+
+for(var n in planets2){
+  //console.log(planets2[n]);
+  
+}
+  console.log(Object.keys(planets2));
+  console.log(Object.values(planets2));
+  
+  console.log(Object.keys(planets2).length);
+  console.log(planets2);
+
+function Discovery(){}
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+var myFunc = function() {
+  this.prop1 ='bar';
+  this.prop2 = 'foo';
+  this.method = function(){
+    this.prop1 +' '+ this.prop2;
+  }}
+var obj1 = new myFunc();
+var obj2 = myFunc();
+console.log(obj1.method());
+console.log(obj1.method(this));
+//console.log(obj2.method());
+
+console.log(planets2[this]);
+</script>
 
 
 
