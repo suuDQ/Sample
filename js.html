@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Document</title>
+  <!-- 　　　 -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<script>
+"use strict";
+
+var planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Yranus','Neptune','Pluto'];
+
+var planets2 = {first:'MERCURY',second:'VENUS',third:'ERATH',fourth:'MARS',fifth:'JUPITER',sixth:'SATURN',seventh:'URANUS',eighth:'NEPTUNE',ninth:'PLUTO',info:function(){return planets2.info(planets2.first)}}
+
+
+for(var n in planets2){
+  //console.log(planets2[n]);
+}
+  function Discovery(a){
+    console.log(planets[a]);
+  }
+  planets.push('Axcis');
+  planets2.zero = 'Axcis';
+console.log(planets2.this);
+  
+
+var human = {};
+  human.name = 'igarashi'; // 名前
+  human.age = 35; // 年齢
+  human.sex = 'M'; // 性別
+  human.getInfo = function(){
+    return human.name + ' ' + human.age + ' ' + human.sex;
+  }
+  console.log(human.getInfo()); // igarashi 35 M
+</script>
+</body>
+</html>
