@@ -16,18 +16,19 @@ var planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Yranus','Nep
 
 var planets2 = {first:'MERCURY',second:'VENUS',third:'ERATH',fourth:'MARS',fifth:'JUPITER',sixth:'SATURN',seventh:'URANUS',eighth:'NEPTUNE',ninth:'PLUTO'}
 
-  function Discovery(a){
-    console.log(planets[a]);
-  }
+  //function Discovery(a){console.log(planets[a]);}Discovery(0);
+  
   planets.push('Axcis');
   planets2.zero = 'Axcis';
+  planets2.info = function(){return planets2.first+' & '+planets2.zero;
+  }
 
-//var bangou = Object.keys(planets2);
 function wakusei(a){
   return '第'+(a+1)+'惑星'+planets[a];
-  //return bangou = Object.keys(planets2);
 }
+
 console.log(wakusei(8));
+console.log(planets2.info());
 //console.log(wakusei(2));   https://www.sejuku.net/blog/27965
 
 
