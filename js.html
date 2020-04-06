@@ -24,19 +24,55 @@ var planets2 = {first:'MERCURY',second:'VENUS',third:'ERATH',fourth:'MARS',fifth
   }
 
 function wakusei(a){
-  return '第'+(a+1)+'惑星'+planets[a];
+  var DDD='第'+(a+1)+'惑星'+planets[a];
+  //console.log(DDD);
 }
 
-console.log(wakusei(8));
-console.log(planets2.info());
-console.log(wakusei(2));   //https://www.sejuku.net/blog/27965
+//console.log(wakusei(8));
+//console.log(planets2.info());
+//console.log(wakusei(1));//https://www.sejuku.net/blog/27965
 
+//wakusei(2+'AAA');
+/*
     function wakusei2(b){
         var result = 'こんにちは、' + b + 'さん';
-        if(b){return true;}
-        else{return false;}
+        if(b){console.log(result);return true;}
+        else{console.log(result);return false;}
     }
-console.log(wakusei2('BBBB'));
+console.log(wakusei2(''));
+
+function Uchu(){
+  var A;
+  return A = planets[0] +'と'+planets2.first;
+}
+  console.log(Uchu());
+ */ 
+
+var wakusei = function(){
+  this.BOX = planets2.first;
+  this.BOX2 = planets2.zero;
+  this.method = function(){
+  this.BOX+' '+this.BOX2;
+  }
+}
+
+var myFunc = function(){
+  this.prop1 ='bar';
+  this.prop2 = 'foo';
+  this.method = function(){
+    return this.prop1 +' '+ this.prop2;
+  }}
+var obj1 = new myFunc();
+var obj2 = new wakusei();
+
+  console.log(obj1.method());
+  console.log(obj2.method());
+  console.log(obj2.BOX);
+//オブジェクトはなぜ2回関数を書くのか？
+var wakusei2 = function(){
+  var Hako = 'bar';
+}
+console.log();
 </script>
 </body>
 </html>
