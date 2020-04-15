@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<title>Document</title>
+<!-- 　　　 -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+<a class="button is-primary"> Button </a>
+
+
+
+
+
+<!-- https://www.site-convert.com/archives/1124 -->
+<!-- https://hawksnowlog.blogspot.com/2019/07/must-be-implemented-navbar-handler-in-bulma-css.html?m=0 -->
+
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand navbar-brand-center">
+    <a class="navbar-item logo" href="/"><img alt="logo_name" src="logo.svg"></a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true">AAA</span>
+      <span aria-hidden="true">BBB</span>
+      <span aria-hidden="true">CCC</span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">ドロップダウンヘッダー1</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="/ddlink1">ドロップダウンリンク1</a>
+          <a class="navbar-item" href="/ddlink2">ドロップダウンリンク2</a>
+          <a class="navbar-item" href="/ddlink3">ドロップダウンリンク3</a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="/ddlink4">ドロップダウンリンク4</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="/link1">リンク1</a>
+      <a class="navbar-item" href="/link2">リンク2</a>
+      <a class="navbar-item" href="/link3">リンク3</a>
+      <a class="navbar-item" href="/link4">リンク4</a>
+    </div>
+    <div class="navbar-end">
+      <a class="navbar-item" href="/link11">リンク11</a>
+      <a class="navbar-item" href="/link12">リンク12</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<script>
+  $(function() {
+        //useragentを参照しています。
+        var isPC = !(/^Mozilla/5.0((iPhone; | iPod; | Linux; U; Android | Linux; Android) / i.test(navigator.userAgent));
+
+          //ハンバーガーメニュー
+          $(".navbar-burger").on("click", function() {
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+          });
+
+          //ドロップダウン
+          if (isPC) {
+            //PCではBulmaのcssの動きで開閉します
+          } else {
+            $(".has-dropdown").on("click", function() {
+              var $this = $(this);
+              $this.toggleClass("is-active");
+              $this.find(".navbar-dropdown").slideToggle();
+            });
+            $(".has-dropdown .navbar-dropdown").hide();
+          }
+        });
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+
+
+
+
+
+<!--https://corp.rakuten.co.jp/ コーポレート-->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    alert("jQueryファイルの読み込み完了でーす。");
+  });
+
+</script>
+</body>
+
+</html>
