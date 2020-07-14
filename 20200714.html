@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <title>Document</title>
-  <!-- 　　　 -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
+    <title>Document</title>
+    <!-- 　　　 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
 </head>
+
 <body>
 
-<script>
-var val='Gloval';
-function getValue(){
-    var val='Local';
-    return val;
-}
-console.log(val);
-console.log(getValue());
-</script>
+    <script>
+        var val = 'Gloval';
+
+        function getValue() {
+            var val = 'Local';
+            return val;
+        }
+        console.log(val);
+        console.log(getValue());
+        var arr = ['java', 'JavaScriipt', ['HTML', 'CSS']];
+        console.log(arr[2][1]);
+
+        var obj = {
+            a: 1,
+            b: 2,
+            c: 3
+        };
+        console.log(obj.a);
+        console.log(obj['a']);
+var obj ={};//カッコが違う
+        obj['123']='AAA';
+        obj['999']='BBB'
+        var val='999';
+console.log(obj['123']);
+        console.log(obj[val]);
+
+    </script>
+    <script>
+    var myObj ={};
+        obj['111']="CCC";
+        var myval='111';
+        console.log(obj[myval]);
+        //2-3-5
+    </script>
 
 
 
 </body>
+
 </html>
