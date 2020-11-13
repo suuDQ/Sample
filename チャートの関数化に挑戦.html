@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Document</title>
+  <!-- 　　　 -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+  <script>
+  "use strict";
+{
+    const canvasTmpl = document.createElement("canvas");
+    Object.assign(canvasTmpl, {width: 400, height: 400});
+    const chartSettingsString = JSON.stringify({
+        type: "radar",
+        data: {
+            labels: ["価格", "品質", "セキュリティ", "デザイン", "ブランド力", ["アフター", "サービス"]],
+            datasets: [
+                {
+                    backgroundColor: "blue",
+                    borderColor: "red",
+                    pointBackgroundColor: "gray",
+                    borderWidth: 2
+                }
+            ]
+        },
+        options: {
+            legend: {display: false},
+            animation: false,
+            responsive: false,
+            scale: {
+                ticks: {
+                    stepSize: 1,
+                    max: 5,
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    var addChart = function(target, values){
+        const canvas = canvasTmpl.cloneNode(false);
+        target.appendChild(canvas);
+        const chartSettings = JSON.parse(chartSettingsString);
+        chartSettings.data.datasets[0].data = [...values];
+        new Chart(canvas.getContext("2d"), chartSettings);
+    }
+}
+  </script>
+</head>
+<body>
+
+<div>
+<script>addChart(document.getElementsByClassName('myChart02'), [3, 3, 3, 3, 3, 2])</script>
+</div>
+<canvas class="myChart02"> </canvas>
+
+</body>
+</html>
